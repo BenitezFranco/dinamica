@@ -5,7 +5,7 @@
 </head>
 <body>
     <h2>Login</h2>
-    <form action="verificaPass.php" method="post">
+    <form action="../Control/verificaPass.php" method="post">
         <label for="username">Usuario:</label>
         <input type="text" id="username" name="username" required><br><br>
         
