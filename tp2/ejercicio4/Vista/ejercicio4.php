@@ -9,14 +9,14 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="container">
+<div class="container border rounded mt-2 mb-1">
    <div class="panel panel-default">
    <div class="panel-heading">
 
-            <h1 class="panel-title"> <i class="glyphicon glyphicon-edit"></i> Cinem@s</h1>
+            <h1 class="panel-title text-primary"> <a><span class="glyphicon glyphicon-edit"></span></a> Cinem@s</h1>
          </div> 
          <div class="panel-body"> 
-         <form class="row g-3 needs-validation" id="miFormulario" method="get" action="resultado.php" novalidate>
+         <form class="row g-3 needs-validation" id="miFormulario" method="get" action="accion/resultado.php" novalidate>
             <table class="table">
                 <tr>
                     <td> <div class="col-md-12">
