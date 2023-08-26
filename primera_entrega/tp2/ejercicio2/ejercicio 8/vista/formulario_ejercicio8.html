@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario - Ejercicio 8</title>
+    <link rel="stylesheet" href="css/estilos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#formEntradasCine").submit(function (event) {
+                event.preventDefault();
+
+                var edad = $("#edad").val();
+                var esEstudiante = $("input[name=estudiante]:checked").val();
+
+                if (edad === "" || isNaN(edad) || parseInt(edad) < 0 || (esEstudiante !== "si" && esEstudiante !== "no")) {
+                    alert("Por favor, ingrese una edad válida y complete todos los campos.");
+                } else {
+                    this.submit();
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora de Entradas de Cine</h1>
+        <form id="formEntradasCine" action="accion/a_formulario.php" method="get">
+            <label for="edad">Edad:</label>
+            <input type="text" id="edad" name="edad" required>
+            
+            <label for="estudiante">¿Es estudiante?</label>
+            <input type="checkbox" id="estudiante" name="estudiante">
+            
+            <button type="submit">Calcular Precio</button>
+            <button type="reset">Limpiar Formulario</button>
+        </form>
+    </div>
+    <a class="button" href="../../../../menu/indexMenu.html">Volver</a>
+</body>
+</html>
