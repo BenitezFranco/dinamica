@@ -139,7 +139,7 @@ class Persona{
     public function cargar(){
         $resp = false;
         $base=new BaseDatos();
-        $sql="SELECT * FROM `persona` WHERE NroDni = ".$this->getNroDni();
+        $sql="SELECT * FROM `persona` WHERE NroDni = '".$this->getNroDni()."'";
         if ($base->Iniciar()) {
             $res = $base->Ejecutar($sql);
             if($res>-1){

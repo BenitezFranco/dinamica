@@ -94,7 +94,7 @@ class Auto{
     public function cargar(){
         $resp = false;
         $base=new BaseDatos();
-        $sql="SELECT * FROM  auto  WHERE Patente = ".$this->getPatente();
+        $sql="SELECT * FROM  auto  WHERE Patente = '".$this->getPatente()."'";
         if ($base->Iniciar()) {
             $res = $base->Ejecutar($sql);
             if($res>-1){
@@ -108,7 +108,7 @@ class Auto{
                 }
             }
         } else {
-            $this->setmensajeoperacion("Tabla->listar: ".$base->getError());
+            $this->setmensajeoperacion("Auto->listar: ".$base->getError());
         }
         return $resp;
     
@@ -140,10 +140,10 @@ class Auto{
             if ($base->Ejecutar($sql)) {
                 $resp = true;
             } else {
-                $this->setmensajeoperacion("Tabla->modificar: ".$base->getError());
+                $this->setmensajeoperacion("Auto->modificar: ".$base->getError());
             }
         } else {
-            $this->setmensajeoperacion("Tabla->modificar: ".$base->getError());
+            $this->setmensajeoperacion("Auto->modificar: ".$base->getError());
         }
         return $resp;
     }
@@ -156,10 +156,10 @@ class Auto{
             if ($base->Ejecutar($sql)) {
                 return true;
             } else {
-                $this->setmensajeoperacion("Tabla->eliminar: ".$base->getError());
+                $this->setmensajeoperacion("Auto->eliminar: ".$base->getError());
             }
         } else {
-            $this->setmensajeoperacion("Tabla->eliminar: ".$base->getError());
+            $this->setmensajeoperacion("Auto->eliminar: ".$base->getError());
         }
         return $resp;
     }
