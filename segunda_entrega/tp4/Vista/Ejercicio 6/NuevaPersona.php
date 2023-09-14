@@ -4,17 +4,17 @@
     <title>Formulario Nueva Persona</title>
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <script src="../Vista/js/validaciones.js"></script>
 </head>
 <body>
 <?php
-    include_once './cabecera.php';
+    include_once '../estructura/cabecera.php';
     ?>
     
     <div class="container">
     <h1>Agregar un cliente</h1>
-    <form id="nuevaPersonaForm" action="../Vista/accion/accionNuevaPersona.php" method="post" onsubmit="return validarPersona()">
+    <form id="nuevaPersonaForm" action="../accion/accionNuevaPersona.php" method="post" onsubmit="return validarPersona()">
         <label for="nroDni">Número de DNI:</label>
         <input type="text" id="nroDni" name="NroDni" required><br><br>
 
@@ -38,7 +38,10 @@
     
     </div>
     <div id="mensaje"></div>
-  
+    <?php
+    include_once '../estructura/footer.php';
+    ?>
   
 </body>
+
 </html>

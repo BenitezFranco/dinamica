@@ -10,7 +10,7 @@
 <body>
 
     <?php
-    include_once './cabecera.php';
+    include_once '../estructura/cabecera.php';
     $datos = data_submitted();
     $arregloPersonas= array();
     //print_r($datos);
@@ -31,7 +31,10 @@ print_r($arregloPersonas);*/ //trae el array vacio ¿¿¿¿¿¿
     }
 
     ?>
-    <button class="mi-boton"><a href="../NuevaPersona.php">Volver</a></button>
+    <button class="mi-boton"><a href="../Ejercicio 6/NuevaPersona.php">Volver</a></button>
+    <?php
+include_once("../estructura/footer.php");
+?>
 </body>
 
 </html>

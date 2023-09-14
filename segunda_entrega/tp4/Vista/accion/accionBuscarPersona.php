@@ -1,10 +1,10 @@
 <?php 
-    include_once './cabecera.php';
+    include_once '../estructura/cabecera.php';
     $param = data_submitted();
     $abmPersona= new abmPersona();
     $array= $abmPersona->buscar($param);
     if(count($array)>0){
-        $persona=$abmPersona->toArray($array[0]);
+        $persona=$array[0];
     }else{
         $persona = null;
     }
@@ -47,10 +47,12 @@
             }
             
         ?>
-    <button class="mi-boton"><a href="../BuscarPersona.php">Volver</a></button>
+    <button class="mi-boton m-3"><a href="../Ejercicio 9/BuscarPersona.php">Volver</a></button>
 
 
     </div>
-   
+    <?php
+include_once("../estructura/footer.php");
+?>
 </body>
 </html>

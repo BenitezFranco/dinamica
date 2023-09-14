@@ -1,5 +1,5 @@
 <?php
-include_once("./cabecera.php");
+include_once '../estructura/cabecera.php';
 
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -13,7 +13,7 @@ include_once("./cabecera.php");
 <div class="container">
     <h3>Agregar Auto</h3>
 
-    <form id="agregarAuto" method="post" action="accion/accionNuevoAuto.php">
+    <form id="agregarAuto" method="post" action="../accion/accionNuevoAuto.php">
         <div class="form-group">
             <label for="Patente">Patente</label>
             <input id="Patente" name="Patente" type="text" class="form-control" maxlength="7" pattern="[A-Za-z]{3} [0-9]{3}" title="Debe ingresar 3 letras, un espacio, seguido de 3 números" required>
@@ -52,6 +52,9 @@ include_once("./cabecera.php");
     </form>
     <br><br>
 </div>
+<?php
+    include_once '../estructura/footer.php';
+    ?>
 <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
     <script src="../js/validaAuto.js"></script>

@@ -85,8 +85,12 @@ class Auto{
        $this->setDuenio($duenio);
     }
 
-
-
+    //
+    //Devuelve un arreglo asociativo del objeto
+    //@return array
+    public function toArray(){
+        return ["Patente"=> $this->getPatente(), "Marca" => $this->getMarca(), "Modelo" => $this->getModelo()];
+    }
 
     //ORM
 
@@ -175,11 +179,11 @@ class Auto{
         if($res>-1){
             if($res>0){
                 while ($row = $base->Registro()){
-                    $obj= new Auto();
                     $duenio= new Persona();
                     $duenio->setNroDni($row['DniDuenio']);
                     $duenio->cargar();
-                    $obj->setear($row['Patente'], $row['Marca'], $row['Modelo'],$duenio);
+                    $duenio= $duenio->toArray();
+                    $obj=["Patente"=> $row['Patente'], "Marca" => $row['Marca'], "Modelo" => $row['Modelo'],"DniDuenio"=>$duenio];
                     array_push($arreglo, $obj);
                 }
                

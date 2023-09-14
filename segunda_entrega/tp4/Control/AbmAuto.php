@@ -2,40 +2,6 @@
 class AbmAuto{
     //Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
 
-    public function getPatente($auto){
-        return $auto->getPatente();
-    }
-
-    public function getMarca($auto){
-        return $auto->getMarca();
-    }
-
-    public function getModelo($auto){
-        return $auto->getModelo();
-    }
-
-    public function getDuenio($auto){
-        return $auto->getDuenio();
-    }
-
-    public function setPatente($auto, $param){
-        $auto->setPatente($param);
-    }
-    public function setModelo($auto, $param){
-        $auto->setModelo($param);
-    }
-    public function setMarca($auto, $param){
-        $auto->setMarca($param);
-    }
-    public function setDuenio($auto, $param){
-        $auto->setDuenio($param);
-    }
- 
-    public function toArray($auto){
-        $res= ["Patente"=> $auto->getPatente(), "Marca" => $auto->getMarca(), "Modelo" => $auto->getModelo(), "Duenio" => $auto->getDuenio()];
-        return $res;
-    }
-
     
     /**
      * Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
@@ -45,10 +11,10 @@ class AbmAuto{
     private function cargarObjeto($param){
         $obj = null;
            
-        if( array_key_exists('Patente',$param) and array_key_exists('Marca',$param)and array_key_exists('Modelo',$param)and array_key_exists('Duenio',$param)){
+        if( array_key_exists('Patente',$param) and array_key_exists('Marca',$param)and array_key_exists('Modelo',$param)and array_key_exists('DniDuenio',$param)){
             $obj = new Auto();
             $duenio= new Persona();
-            $duenio->setNroDni($param['Duenio']); //en el array viene como Duenio NO COMO DniDuenio!!!!!!!!!!!
+            $duenio->setNroDni($param['DniDuenio']); //en el array viene como Duenio NO COMO DniDuenio!!!!!!!!!!!
             $duenio->cargar();
             $obj->setear($param['Patente'], $param['Marca'], $param['Modelo'],$duenio);
         }
@@ -153,8 +119,7 @@ class AbmAuto{
                  $where.=" and DniDuenio ='".$param['DniDuenio']."' ";
         }
         $arreglo = Auto::listar($where);  
-        return $arreglo;    
-        
+        return $arreglo;        
     }
     
 }

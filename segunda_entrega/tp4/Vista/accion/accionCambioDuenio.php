@@ -1,5 +1,5 @@
 <?php 
-    include_once './cabecera.php';
+    include_once '../estructura/cabecera.php';
 
     $param = data_submitted();
     $abmAuto= new AbmAuto();
@@ -38,10 +38,9 @@
     }
 
     if($persona!=null && $auto!=null){
-        if(strcmp($abmPersona->getNroDni($abmAuto->getDuenio($auto)),$abmPersona->getNroDni($persona))!==0){
-            $aux= $abmAuto->toArray($auto);
-            $aux['DniDuenio']= $persona;
-            if($abmAuto->modificacion($aux)){
+        if(strcmp($auto["DniDuenio"]["NroDni"],$persona["NroDni"])!==0){
+            $auto['DniDuenio']= $persona["NroDni"];
+            if($abmAuto->modificacion($auto)){
                 $cadena="Se pudo cambiar el dueño";
             }else{
                 $cadena="No se pudo cambiar el dueño";
@@ -52,6 +51,8 @@
     }
     echo "<p>".$cadena."</p>";
     ?>
-     
+     <?php
+include_once("../estructura/footer.php");
+?>
 </body>
 </html>

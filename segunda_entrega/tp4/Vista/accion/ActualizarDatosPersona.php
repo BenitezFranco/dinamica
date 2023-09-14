@@ -1,5 +1,5 @@
 <?php 
-    include_once './cabecera.php';
+    include_once '../estructura/cabecera.php';
     $param = data_submitted();
     $abmPersona= new AbmPersona();
 ?>
@@ -23,6 +23,8 @@
             }
     echo "<p>".$cadena."</p>";
     ?>
-      
+   <?php
+include_once("../estructura/footer.php");
+?>   
 </body>
 </html>

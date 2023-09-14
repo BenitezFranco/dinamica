@@ -132,8 +132,10 @@ class Persona{
        $this->setColAutos($colAutos);
     }
 
-
-
+    //
+    public function toArray(){
+        return ["NroDni"=> $this->getNroDni(), "Apellido" => $this->getApellido(), "Nombre" => $this->getNombre(), "fechaNac" => $this->getFecNac(),"Telefono" => $this->getTelefono(),"Domicilio" => $this->getDomicilio()];
+    }
 
     //ORM
     public function cargar(){
@@ -220,8 +222,8 @@ class Persona{
             if($res>0){
                 
                 while ($row = $base->Registro()){
-                    $obj= new Persona();
-                    $obj->setear($row['NroDni'], $row['Apellido'], $row['Nombre'], $row['fechaNac'],$row['Telefono'],$row['Domicilio'],[]);
+                    $obj=["NroDni"=>$row['NroDni'],"Apellido"=>$row['Apellido'],"Nombre"=>$row['Nombre'],"fechaNac"=>$row['fechaNac'],"Telefono"=>$row['Telefono'],"Domicilio"=>$row['Domicilio']];
+                    
                     array_push($arreglo, $obj);
                 }
                

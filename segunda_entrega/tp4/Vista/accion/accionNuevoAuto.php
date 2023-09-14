@@ -1,5 +1,5 @@
 <?php 
-include_once './cabecera.php';
+include_once '../estructura/cabecera.php';
 //Busca que la patente NO este repetida, y que el Dni exista, si no existe el DNI
 //muestra el boton para agregar una nueva persona
 $datos = data_submitted();
@@ -63,9 +63,11 @@ $resultado1= $objTrans->buscar($param);
     ?>
 </div>
 <br>
-<br><a href="../nuevoAuto.php" class="btn btn-primary">Volver</a>
+<br><a href="../../nuevoAuto.php" class="btn btn-primary">Volver</a>
 
-
+<?php
+include_once("../estructura/footer.php");
+?>
 
 </body>
 

@@ -1,5 +1,5 @@
 <?php
-    include_once './cabecera.php';
+    include_once '../estructura/cabecera.php';
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cambio Duenio</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <script src="./js/validaciones.js"></script>
     <style>
         .error {
@@ -21,7 +21,7 @@
 <body> 
     <div class="container">
     <h1>Cambio de Dueño</h1>
-    <form action="./accion/accionCambioDuenio.php" method="post" onsubmit="return validarCambioDuenio()">
+    <form action="../accion/accionCambioDuenio.php" method="post" onsubmit="return validarCambioDuenio()">
     <label for="patente">Patente:</label>
         <input type="text" placeholder="Patente (ABC 123)" name="Patente" id="Patente" required>
         <label for="dniduenio">DNI del proximo propietario:</label>
@@ -29,7 +29,9 @@
         <button type="submit">Cambiar</button>
     </form>
 </div>
-
+<?php
+    include_once '../estructura/footer.php';
+    ?>
 </body>
 
 </html>

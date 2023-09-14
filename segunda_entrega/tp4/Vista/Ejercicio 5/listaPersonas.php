@@ -1,6 +1,6 @@
 
 <?php
-    include_once './cabecera.php';
+    include_once '../estructura/cabecera.php';
     $abmPersona= new AbmPersona();
     $personas = array();
     $personas = $abmPersona ->buscar(null);
@@ -11,7 +11,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista Personas</title>
-    <link rel="stylesheet" type="text/css" href="./css/styles.css">
+    <link rel="stylesheet" type="text/css" href="../css/styles.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
    
 </head>
@@ -36,14 +36,14 @@
                 if (count($personas) > 0) {
                     foreach ($personas as $persona) {
                         echo "<tr>";
-                        echo "<td>" . $abmPersona->getNroDni($persona) . "</td>";
-                        echo "<td>" . $abmPersona->getApellido($persona) . "</td>";
-                        echo "<td>" . $abmPersona->getNombre($persona) . "</td>";
-                        echo "<td>" . $abmPersona->getFecNac($persona) . "</td>";
-                        echo "<td>" . $abmPersona->getTelefono($persona) . "</td>";
-                        echo "<td>" . $abmPersona->getDomicilio($persona) . "</td>";
-                        echo '<td><form action="./accion/autosPersona.php" method="post">
-                                <input type="hidden" name="NroDni" value="' . $abmPersona->getNroDni($persona) . '">
+                        echo "<td>" . $persona["NroDni"] . "</td>";
+                        echo "<td>" . $persona["Apellido"] . "</td>";
+                        echo "<td>" . $persona["Nombre"]. "</td>";
+                        echo "<td>" . $persona["fechaNac"] . "</td>";
+                        echo "<td>" . $persona["Telefono"] . "</td>";
+                        echo "<td>" . $persona["Domicilio"] . "</td>";
+                        echo '<td><form action="../accion/autosPersona.php" method="post">
+                                <input type="hidden" name="NroDni" value="' . $persona["NroDni"] . '">
                                 <button type="submit" class="btn btn-link">Ver Autos</button>
                               </form></td>';
                         echo "</tr>";
@@ -57,7 +57,9 @@
     </div>
    
 </div>
-
+<?php
+    include_once '../estructura/footer.php';
+    ?>
 
 </body>
 </html>

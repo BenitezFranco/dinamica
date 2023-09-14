@@ -2,58 +2,6 @@
 class AbmPersona{
     //Espera como parametro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
 
-    public function getNroDni($persona){
-        return $persona->getNroDni();
-    }
-
-    public function getApellido($persona){
-        return $persona->getApellido();
-    }
-
-    public function getNombre($persona){
-        return $persona->getNombre();
-    }
-
-    public function getFecNac($persona){
-        return $persona->getFecNac();
-    }
-
-    public function getTelefono($persona){
-        return $persona->getTelefono();
-    }
-    public function getDomicilio($persona){
-        return $persona->getDomicilio();
-    }
-    public function getColAutos($persona){
-        return $persona->getColAutos();
-    }
-
-    public function setNroDni($persona, $param){
-        $persona->setNroDni($param);
-    }
-    public function setApellido($persona, $param){
-        $persona->setApellido($param);
-    }
-    public function setNombre($persona, $param){
-        $persona->setNombre($param);
-    }
-    public function setFecNac($persona, $param){
-        $persona->setFecNac($param);
-    }
-    public function setTelefono($persona, $param){
-        $persona->setTelefono($param);
-    }
-    public function setDomicilio($persona, $param){
-        $persona->setDomicilio($param);
-    }
-    public function setColAutos($persona, $param){
-        $persona->setColAutos($param);
-    }
-
-    public function toArray($persona){
-        $res= ["NroDni"=> $persona->getNroDni(), "Apellido" => $persona->getApellido(), "Nombre" => $persona->getNombre(), "fechaNac" => $persona->getFecNac(),"Telefono" => $persona->getTelefono(),"Domicilio" => $persona->getDomicilio()];
-        return $res;
-    }
 
     
     /**
@@ -174,10 +122,6 @@ class AbmPersona{
         }
         $arreglo = Persona::listar($where);  
         return $arreglo;
-            
-            
-      
-        
     }
     
 }

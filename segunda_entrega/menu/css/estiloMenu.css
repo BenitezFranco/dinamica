@@ -166,3 +166,17 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.logo-github {
+    margin-bottom: 1rem;
+}
+
+.logo-github img {
+    width: 70px; /* Ajusta el tamaño del logo de GitHub según tu preferencia */
+    height: auto;
+    transition: transform 0.2s;
+}
+
+.logo-github img:hover {
+    transform: scale(1.1);
+}

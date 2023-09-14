@@ -1,12 +1,12 @@
 <?php
-    include_once './cabecera.php';
+    include_once '../estructura/cabecera.php';
     $abmPersona= new AbmPersona();
     $param = data_submitted();
     $array= $abmPersona->buscar($param);
     if(count($array)>0){
         $persona=$array[0];
         $abmAuto= new AbmAuto();
-        $aux= ["DniDuenio"=>$abmPersona->getNroDni($persona)];
+        $aux= ["DniDuenio"=>$persona["NroDni"]];
         $autos = $abmAuto->buscar($aux);
     }else{
         $persona = null;
@@ -37,12 +37,12 @@
     <?php
         if(count($array)>0){
             $cadena = '<div class="row border">';
-                $cadena.= '<p class="col">'.$abmPersona->getNroDni($persona).'</p>';
-                $cadena.= '<p class="col ">'.$abmPersona->getApellido($persona).'</p>';
-                $cadena.= '<p class="col ">'.$abmPersona->getNombre($persona).'</p>';
-                $cadena.= '<p class="col ">'.$abmPersona->getFecNac($persona).'</p>';
-                $cadena.= '<p class="col ">'.$abmPersona->getTelefono($persona).'</p>';
-                $cadena.= '<p class="col ">'.$abmPersona->getDomicilio($persona).'</p></div>';
+                $cadena.= '<p class="col">'.$persona["NroDni"].'</p>';
+                $cadena.= '<p class="col ">'.$persona["Apellido"].'</p>';
+                $cadena.= '<p class="col ">'.$persona["Nombre"].'</p>';
+                $cadena.= '<p class="col ">'.$persona["fechaNac"].'</p>';
+                $cadena.= '<p class="col ">'.$persona["Telefono"].'</p>';
+                $cadena.= '<p class="col ">'.$persona["Domicilio"].'</p></div>';
                 echo $cadena;
                 $cadena= '<div>
                         <p>Autos</p>
@@ -56,9 +56,9 @@
                 if(count($autos)>0){
                     foreach($autos as $auto){
                         $cadena .= '<div class="row border">';
-                        $cadena.= '<p class="col border">'.$abmAuto->getPatente($auto).'</p>';
-                        $cadena.= '<p class="col border">'.$abmAuto->getMarca($auto).'</p>';
-                        $cadena.= '<p class="col border">'.$abmAuto->getModelo($auto).'</p></div>';
+                        $cadena.= '<p class="col border">'.$auto["Patente"].'</p>';
+                        $cadena.= '<p class="col border">'.$auto["Marca"].'</p>';
+                        $cadena.= '<p class="col border">'.$auto["Modelo"].'</p></div>';
                         
                     }
                     echo $cadena;
@@ -72,9 +72,12 @@
         
         
     ?>
-    <button class="mi-boton"><a href="../listaPersonas.php">Volver a listar clientes </a></button>
+    <button class="mi-boton"><a href="../Ejercicio 5/listaPersonas.php">Volver a listar clientes </a></button>
 
 
 </div>
+<?php
+include_once("../estructura/footer.php");
+?>
 </body>
 </html>
