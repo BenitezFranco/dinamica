@@ -1,21 +1,16 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Resultado Nueva Persona</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
-</head>
-
-<body>
-
-    <?php
+<?php
+    $tituloPagina = "Resultado Nueva Persona";
     include_once '../estructura/cabecera.php';
     $datos = data_submitted();
     $arregloPersonas= array();
     //print_r($datos);
     $abmPersona = new AbmPersona();
     $arregloPersonas = $abmPersona->buscar($datos);
+
+?>
+<body>
+
+    <?php
 /*
 $cuenta= count($arregloPersonas);
 echo $cuenta;

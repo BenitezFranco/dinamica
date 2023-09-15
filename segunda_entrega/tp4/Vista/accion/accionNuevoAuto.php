@@ -1,4 +1,6 @@
 <?php 
+
+$tituloPagina= "Resultado Agregar Auto";
 include_once '../estructura/cabecera.php';
 //Busca que la patente NO este repetida, y que el Dni exista, si no existe el DNI
 //muestra el boton para agregar una nueva persona
@@ -46,14 +48,7 @@ $resultado1= $objTrans->buscar($param);
     
 //}
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-<title>Agregar Auto</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="../css/styles.css">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
+
 <body><br> <br>
 <div class="container">
     <?php
@@ -63,7 +58,7 @@ $resultado1= $objTrans->buscar($param);
     ?>
 </div>
 <br>
-<br><a href="../../nuevoAuto.php" class="btn btn-primary">Volver</a>
+<br><a href="../Ejercicio 7/nuevoAuto.php" class="btn btn-primary">Volver</a>
 
 <?php
 include_once("../estructura/footer.php");
@@ -71,4 +66,3 @@ include_once("../estructura/footer.php");
 
 </body>
 
-</html>

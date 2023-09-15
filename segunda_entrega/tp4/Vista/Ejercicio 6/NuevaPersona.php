@@ -1,16 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Formulario Nueva Persona</title>
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    <script src="../js/validaciones.js"></script>
-</head>
-<body>
 <?php
+$tituloPagina= "Formulario Nueva Persona";
     include_once '../estructura/cabecera.php';
     ?>
+<body>
+
     
     <div class="container">
     <h1>Agregar un cliente</h1>
@@ -44,4 +37,3 @@
   
 </body>
 
-</html>

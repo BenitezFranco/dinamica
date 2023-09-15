@@ -1,4 +1,5 @@
 <?php
+$tituloPagina="Lista Autos personas";
     include_once '../estructura/cabecera.php';
     $abmPersona= new AbmPersona();
     $param = data_submitted();
@@ -12,16 +13,7 @@
         $persona = null;
     }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista Autos personas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
-</head>
+
 <body>
 <div class="border">
     
@@ -80,4 +72,3 @@
 include_once("../estructura/footer.php");
 ?>
 </body>
-</html>

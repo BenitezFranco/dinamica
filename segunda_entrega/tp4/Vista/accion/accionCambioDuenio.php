@@ -1,4 +1,5 @@
 <?php 
+    $tituloPagina= "Cambio Dueño";
     include_once '../estructura/cabecera.php';
 
     $param = data_submitted();
@@ -18,15 +19,7 @@
     }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    <title>Cambio Duenio</title>
-</head>
+
 <body>
     <?php 
     $cadena= "";
@@ -51,8 +44,8 @@
     }
     echo "<p>".$cadena."</p>";
     ?>
+    echo '<button class="mi-boton m-3"><a href="../Ejercicio 8/CambioDuenio.php">Volver</a></button>';
      <?php
 include_once("../estructura/footer.php");
 ?>
 </body>
-</html>

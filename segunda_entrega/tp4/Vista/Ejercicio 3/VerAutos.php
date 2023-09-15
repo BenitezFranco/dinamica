@@ -1,5 +1,5 @@
 <?php 
-
+$tituloPagina="Ejercicio 3 - TP4";
 include_once '../estructura/cabecera.php'; 
 
 
@@ -9,14 +9,7 @@ $null= NULL;
 $listaAuto = $objAbmAuto->buscar($null);
 
 ?>	
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-<title>Ejercicio 3 - TP4</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="../css/styles.css">
-</head>
+
 <body>
 <h3>Autos cargados</h3>
 <table class="table table-bordered">
@@ -53,7 +46,6 @@ include_once("../estructura/footer.php");
 ?>
 </body>
 
-</html>
 
 
 

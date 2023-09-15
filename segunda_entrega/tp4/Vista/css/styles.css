@@ -188,3 +188,7 @@ body {
     background-color: #00172e;
     border-color: #00172e;
 }
+
+.error {
+    border: 2px solid red;
+}

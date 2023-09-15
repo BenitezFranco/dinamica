@@ -1,14 +1,9 @@
 <?php
+$tituloPagina="TP4 EJER 7";
 include_once '../estructura/cabecera.php';
 
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html>
-<head>
-<title>TP4 EJER 7</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-</head>
+
 <body>
 <div class="container">
     <h3>Agregar Auto</h3>
@@ -55,9 +50,6 @@ include_once '../estructura/cabecera.php';
 <?php
     include_once '../estructura/footer.php';
     ?>
-<!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.min.js"></script>
-    <script src="../js/validaciones.js"></script>
+
 </body>
 
-</html>

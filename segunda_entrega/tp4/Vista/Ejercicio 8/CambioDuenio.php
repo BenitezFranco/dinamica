@@ -1,22 +1,8 @@
 <?php
+    $tituloPagina ="Cambio Dueño";
     include_once '../estructura/cabecera.php';
     ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cambio Duenio</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    <script src="../js/validaciones.js"></script>
-    <style>
-        .error {
-            border: 2px solid red;
-        }
-    </style>
-</head>
 
 <body> 
     <div class="container">
@@ -33,5 +19,3 @@
     include_once '../estructura/footer.php';
     ?>
 </body>
-
-</html>

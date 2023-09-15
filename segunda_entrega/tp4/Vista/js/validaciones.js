@@ -179,3 +179,6 @@ function validarCambioDuenio() {
 
     return true; // Permite el envío del formulario si ambos campos son válidos
 }
+
+
+

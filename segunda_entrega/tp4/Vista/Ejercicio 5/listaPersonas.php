@@ -1,20 +1,12 @@
 
 <?php
+$tituloPagina= "Lista Personas";
     include_once '../estructura/cabecera.php';
     $abmPersona= new AbmPersona();
     $personas = array();
     $personas = $abmPersona ->buscar(null);
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista Personas</title>
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-   
-</head>
+
 <body>
 <div class="container mt-4">
     <h1 class="text-center">Lista de Personas</h1>
@@ -60,6 +52,4 @@
 <?php
     include_once '../estructura/footer.php';
     ?>
-
 </body>
-</html>

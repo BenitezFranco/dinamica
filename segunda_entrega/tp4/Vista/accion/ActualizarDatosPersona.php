@@ -1,19 +1,13 @@
 <?php 
+$tituloPagina= "Actualizar Datos Persona";
     include_once '../estructura/cabecera.php';
     $param = data_submitted();
     $abmPersona= new AbmPersona();
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Actualizar Datos Persona</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/styles.css">
-</head>
+
 <body>
+    <div>
     <?php 
     
             if($abmPersona->modificacion($param)){
@@ -23,8 +17,9 @@
             }
     echo "<p>".$cadena."</p>";
     ?>
+    <button class="mi-boton m-3"><a href="../Ejercicio 9/BuscarPersona.php">Volver</a></button>
+    </div>
    <?php
 include_once("../estructura/footer.php");
 ?>   
 </body>
-</html>
