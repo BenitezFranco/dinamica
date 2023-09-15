@@ -21,7 +21,7 @@
             <button type="submit">Buscar</button>
         </form>
     </div>
-    <script type="text/javascript" src="../Vista/js/validaciones.js"></script>
+    <script type="text/javascript" src="../js/validaciones.js"></script>
 
     <?php
     include_once '../estructura/footer.php';
