@@ -1,11 +1,6 @@
 <?php
-include_once '../../util/fpdf/fpdf.php';
-include_once '../../Control/AbmAuto.php';
-include_once '../../Modelo/Auto.php';
-include_once '../../Modelo/conector/BaseDatos.php';
-include_once '../../Modelo/Persona.php';
-//include_once '../../../Control/AbmAuto.php';
 
+include('../../configuracion.php');
 
 class PDF extends FPDF
 {
