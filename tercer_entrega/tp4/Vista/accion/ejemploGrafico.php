@@ -3,8 +3,11 @@
     include_once '../estructura/cabecera.php';
 ?>
 <body>
+   <!-- <script src="../js/chart.js/node_modules/chart.js/dist/chart.umd.js"></script>
+    
+-->
     <script src="../js/chart.js/node_modules/chart.js/dist/chart.umd.js"></script>
-
+    
     <?php
     $abmpersona= new AbmPersona();
     $personas= $abmpersona->buscar("");
@@ -23,7 +26,7 @@
     
     <script type="module" src="../js/ejemploGrafico.js"></script>
     
-<?php
+    <?php
     include_once '../estructura/footer.php';
     ?>
 </body>

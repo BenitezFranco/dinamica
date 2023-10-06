@@ -65,6 +65,8 @@ var chartConfig = {
     ],
   },
   options: {
+
+
     scales: {
       y: {
         max: num+1,
@@ -74,6 +76,12 @@ var chartConfig = {
     },
 
     plugins: {
+      title: {
+        display: true,
+        text: 'Autos por clientes',
+        color: 'blue',
+        align: 'start'
+      },
       legend: {
         display: true, // Muestra la leyenda
         position: 'left', // Puedes cambiar la posición a 'top', 'right', 'bottom', 'left', etc.
@@ -90,11 +98,6 @@ var chartConfig = {
             });
           }
         },
-      },
-      title: {
-        display: true,
-        text: 'Autos por clientes',
-        color: 'blue',
       }
     },
   },
