@@ -3,7 +3,8 @@
     include_once '../estructura/cabecera.php';
 ?>
 <body>
-    <script src="../js/chart.js/node_modules/chart.js/dist/chart.umd.js""></script>
+    <script src="../js/chart.js/node_modules/chart.js/dist/chart.umd.js"></script>
+
     <?php
     $abmpersona= new AbmPersona();
     $personas= $abmpersona->buscar("");
@@ -16,9 +17,11 @@
     }
     echo $cadena;
     ?>
+    <div class="container">
     <canvas id="chartCanvas"></canvas>
-
-    <script src="../js/ejemploGrafico.js"></script>
+    </div>
+    
+    <script type="module" src="../js/ejemploGrafico.js"></script>
     
 <?php
     include_once '../estructura/footer.php';

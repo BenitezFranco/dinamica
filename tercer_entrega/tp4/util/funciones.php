@@ -28,8 +28,7 @@ spl_autoload_register(function($class_name){
         $_SESSION['ROOT'].'Modelo/',
         $_SESSION['ROOT'].'Modelo/conector/',
         $_SESSION['ROOT'].'Control/',
-        $_SESSION['ROOT'].'util/',
-        $_SESSION['ROOT'].'util/fpdf/',
+        $_SESSION['ROOT'].'Vista/fpdf/',
       //  $GLOBALS['ROOT'].'util/class/',
     );
     //print_r($directorys) ;
