@@ -10,6 +10,8 @@ $tituloPagina= "Lista Personas";
 <body>
 <div class="container mt-4">
     <h1 class="text-center">Lista de Personas</h1>
+    <button class="mi-boton m-3" style="float: right;"><a href="../accion/accionPdfPersonas.php" target="_blank">
+  <img src="../img/pdf.png" alt="PDF" width="30" height="30"> Generar PDF </a></button>
     <div class="table-responsive">
         <table class="table table-bordered">
             <thead class="thead-dark">
