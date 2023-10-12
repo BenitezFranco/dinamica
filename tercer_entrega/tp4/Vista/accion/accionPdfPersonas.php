@@ -1,6 +1,7 @@
 <?php
 
 include('../../configuracion.php');
+include('../../util/fpdf/fpdf.php');
 
 class PDF extends FPDF
 {
@@ -11,13 +12,18 @@ function Header()
     $this->Image('../img/descarga.jpeg',10,6,20);
     // Arial bold 15
     $this->SetFont('Arial','B',12);
+    
     // Move to the right
     $this->Cell(60);
     // Title
-    $this->Cell(50,10,'Reporte de Personas',1,0,'C');
+    $this->SetTextColor(16,21,109);
+    $this->Cell(80,10,'Reporte de Personas',1,0,'C');
+   
+    $this->SetTextColor(0,0,0);
     //agrego grupo 11
     $this->SetXY(160, 10);
     $this->SetFont('Arial', 'B', 12);
+  
     $this->Cell(30, 10, 'Grupo 11-PWD', 0, 0, 'C');
     // Line break
     $this->Ln(20);
@@ -55,6 +61,7 @@ $pdf = new PDF();
 $pdf->AliasNbPages();
 $pdf->AddPage();
 $pdf->SetFont('Times','',12);
+$pdf->SetTextColor(46, 64, 83);
 foreach($listaPersonas as $objPersona){
     $pdf->Cell(20,10,$objPersona["NroDni"],1,0,'C',0);
     $pdf->Cell(30,10,$objPersona["Apellido"],1,0,'C',0);
