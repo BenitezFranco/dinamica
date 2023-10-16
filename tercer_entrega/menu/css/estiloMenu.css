@@ -68,7 +68,18 @@ nav {
     color: white; 
     text-decoration: none; 
 }
+.tabla-personas {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
 
+  .tabla-personas th, .tabla-personas td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
 .menu {
     list-style: none;
     padding: 0;
