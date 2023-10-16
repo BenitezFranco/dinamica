@@ -14,61 +14,88 @@ $tituloPagina="Lista Autos personas";
     }
 ?>
 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Enlace a Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
 <body>
-<div class="border">
-    
-    <div class="row border">
-    <p class="col border fw-bold">Número DNI</p>
-    <p class="col border fw-bold">Apellido</p>
-    <p class="col border fw-bold">Nombre</p>
-    <p class="col border fw-bold">Fecha Nacimiento</p>
-    <p class="col border fw-bold">Teléfono</p>
-    <p class="col border fw-bold">Domicilio</p>
-    </div>
+  <div class="container">
+    <div class="border">
+    <button class="btn btn-primary float-right mb-2">
+  <a href="../accion/pdfAutosPersona.php?dni=<?php echo $persona["NroDni"]; ?>" target="_blank" class="text-light">
+    <img src="../img/pdf.png" alt="PDF" width="30" height="30"> Generar PDF
+  </a>
+</button>
 
-    <?php
-        if(count($array)>0){
-            $cadena = '<div class="row border">';
-                $cadena.= '<p class="col">'.$persona["NroDni"].'</p>';
-                $cadena.= '<p class="col ">'.$persona["Apellido"].'</p>';
-                $cadena.= '<p class="col ">'.$persona["Nombre"].'</p>';
-                $cadena.= '<p class="col ">'.$persona["fechaNac"].'</p>';
-                $cadena.= '<p class="col ">'.$persona["Telefono"].'</p>';
-                $cadena.= '<p class="col ">'.$persona["Domicilio"].'</p></div>';
-                echo $cadena;
-                $cadena= '<div>
-                        <p>Autos</p>
-                        <div class="row border">
-                            <p class="col border fw-bold text-light">Patente</p>
-                            <p class="col border fw-bold text-light">Marca</p>
-                            <p class="col border fw-bold text-light">Modelo</p>
-                        </div>
-                </div>';
 
-                if(count($autos)>0){
-                    foreach($autos as $auto){
-                        $cadena .= '<div class="row border">';
-                        $cadena.= '<p class="col border">'.$auto["Patente"].'</p>';
-                        $cadena.= '<p class="col border">'.$auto["Marca"].'</p>';
-                        $cadena.= '<p class="col border">'.$auto["Modelo"].'</p></div>';
-                        
-                    }
-                    echo $cadena;
-                }else{
-                    echo "<p>No hay autos</p>";
+      <div class="clearfix"></div>
+
+      <!-- Tabla de personas -->
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Número DNI</th>
+            <th>Apellido</th>
+            <th>Nombre</th>
+            <th>Fecha Nacimiento</th>
+            <th>Teléfono</th>
+            <th>Domicilio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><?php echo $persona["NroDni"]; ?></td>
+            <td><?php echo $persona["Apellido"]; ?></td>
+            <td><?php echo $persona["Nombre"]; ?></td>
+            <td><?php echo $persona["fechaNac"]; ?></td>
+            <td><?php echo $persona["Telefono"]; ?></td>
+            <td><?php echo $persona["Domicilio"]; ?></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Tabla de autos -->
+      <div>
+        <h4>Autos</h4>
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th class="bg-dark text-light">Patente</th>
+              <th class="bg-dark text-light">Marca</th>
+              <th class="bg-dark text-light">Modelo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php
+              if(count($autos) > 0){
+                foreach($autos as $auto){
+                  echo '<tr>';
+                  echo '<td>'.$auto["Patente"].'</td>';
+                  echo '<td>'.$auto["Marca"].'</td>';
+                  echo '<td>'.$auto["Modelo"].'</td>';
+                  echo '</tr>';
                 }
-                
-            }else{
-            echo "<p>No hay Personas</p>";
-        }
-        
-        
-    ?>
-    <button class="mi-boton"><a href="../Ejercicio 5/listaPersonas.php">Volver a listar clientes </a></button>
+              } else {
+                echo '<tr><td colspan="3">No hay autos</td></tr>';
+              }
+            ?>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <button class="btn btn-secondary"><a href="../Ejercicio 5/listaPersonas.php" class="text-white">Volver a listar clientes</a></button>
+  </div>
 
-
-</div>
-<?php
-include_once("../estructura/footer.php");
-?>
+  <!-- Scripts de Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
+</html>
+
+
+<!-- fin prueba -->
