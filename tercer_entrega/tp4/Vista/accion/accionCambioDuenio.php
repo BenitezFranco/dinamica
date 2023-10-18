@@ -44,7 +44,7 @@
     }
     echo "<p>".$cadena."</p>";
     ?>
-    echo '<button class="mi-boton m-3"><a href="../Ejercicio 8/CambioDuenio.php">Volver</a></button>';
+    <button class="mi-boton m-3"><a href="../Ejercicio 8/CambioDuenio.php">Volver</a></button>;
      <?php
 include_once("../estructura/footer.php");
 ?>

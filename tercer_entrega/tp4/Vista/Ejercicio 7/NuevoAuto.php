@@ -32,7 +32,7 @@ include_once '../estructura/cabecera.php';
         </div>
         <div class="form-group">
             <label for="Duenio">Dni del dueño</label>
-            <input id="Duenio" name="Duenio" type="text" class="form-control" minlength="7" maxlength="8"  pattern="[0-9]{7,8}" title="Debe ingresar un DNI" required>
+            <input id="Duenio" name="DniDuenio" type="text" class="form-control" minlength="7" maxlength="8"  pattern="[0-9]{7,8}" title="Debe ingresar un DNI" required>
             <div class="invalid-feedback">
                     Debes ingresar un DNI valido 
             </div>

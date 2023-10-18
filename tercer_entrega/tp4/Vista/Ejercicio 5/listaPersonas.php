@@ -52,9 +52,6 @@ $tituloPagina= "Lista Personas";
    
 </div>
 
-<button type="submit" class="btn btn-success m-3"><a href="../accion/ejemploGrafico.php">Graficos de autos</a></button>
-
-
 <?php
     include_once '../estructura/footer.php';
     ?>

@@ -10,7 +10,7 @@ $datos = data_submitted();
 $resp = false;
 $objTrans = new AbmAuto();
 $objPersona= new AbmPersona();
-$dniDuenio= $datos['Duenio'];
+$dniDuenio= $datos['DniDuenio'];
 $param= ['NroDni' => $dniDuenio];
 $resultado= $objPersona->buscar($param);
 
@@ -41,9 +41,9 @@ $resultado1= $objTrans->buscar($param);
 
     
     if($resp){
-        $mensaje = "La accion ".$datos['accion']." se realizo correctamente.";
+        $mensaje = "El auto se agrego correctamente a la base de datos";
     }else {
-        $mensaje = "La accion ".$datos['accion']." no pudo concretarse. <br>".$mensaje2;
+        $mensaje = "La accion no pudo concretarse. <br>".$mensaje2;
     }
     
 //}
