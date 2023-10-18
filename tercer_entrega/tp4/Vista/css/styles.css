@@ -217,3 +217,15 @@ body {
 .error {
     border: 2px solid red;
 }
+
+a {
+   
+    color: #ffffff; /* Cambia el color del texto a tus preferencias */
+}
+a:hover {
+    color: #555; /* Cambia el color cuando el cursor está sobre el enlace */
+    text-decoration: none; /* Elimina el subrayado */
+}
+.botones {
+    text-align: center; /* Centra el contenido horizontalmente */
+}

@@ -55,10 +55,10 @@ var chartConfig = {
     labels: nombres,
     datasets: [
       {
-        label: "Veiculos de su propiedad",
+        label: "Vehiculos de su propiedad",
         data: numeros,
         backgroundColor: coloresAleatorios,
-        borderColor: "rgba(54, 162, 235, 1)",
+        borderColor: "#000",
         borderWidth: 1,
         borderRadius: 5,
       },
