@@ -67,10 +67,10 @@ var chartConfig = {
 
     layout: {
       padding: {
-          left: 10, // Espacio izquierdo
-          right: 10, // Espacio derecho
-          top: 10, // Espacio superior
-          bottom: 10// Espacio inferior
+          left: 10, 
+          right: 10, 
+          top: 10, 
+          bottom: 10
       }
   },
     scales: {
@@ -90,10 +90,10 @@ var chartConfig = {
       },
 
       legend: {
-        display: true, // Muestra la leyenda
-        position: 'left', // Puedes cambiar la posición a 'top', 'right', 'bottom', 'left', etc.
+        display: true, 
+        position: 'left', 
         labels: {
-          usePointStyle: true, // Usa un estilo de punto similar al de las barras
+          usePointStyle: true, 
           generateLabels: function(chart){
             return chart.data.labels.map(function(label,i){
               return {
@@ -112,10 +112,5 @@ var chartConfig = {
   },
 };
 
-<<<<<<< HEAD
-=======
-// Crea el gráfico utilizando Chart.js
-
->>>>>>> 5f6f4e2ed66249b04368951a68fe92c2c1977202
 var myChart = new Chart(ctx, chartConfig);
 myChart.resize(800, 500);  

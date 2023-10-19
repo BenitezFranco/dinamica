@@ -1,9 +1,3 @@
-<<<<<<< HEAD
-=======
-
-
-// Obtén las referencias a los elementos del DOM donde se mostrará el gráfico
->>>>>>> 5f6f4e2ed66249b04368951a68fe92c2c1977202
 var chartCanvas = document.getElementById("chartCanvas");
 var ctx = chartCanvas.getContext("2d");
 
@@ -97,16 +91,13 @@ var chartConfig = {
 
 
       legend: {
-<<<<<<< HEAD
         display: true, 
         position: 'left', 
-=======
         padding:{
           right: 50
         },
-        display: true, // Muestra la leyenda
-        position: 'left', // Puedes cambiar la posición a 'top', 'right', 'bottom', 'left', etc.
->>>>>>> 5f6f4e2ed66249b04368951a68fe92c2c1977202
+        display: true, 
+        position: 'left', 
         labels: {
           usePointStyle: true, 
           generateLabels: function(chart){
@@ -128,8 +119,8 @@ var chartConfig = {
   },
 };
 const options = {
-  responsive: true, // Permite que el gráfico sea receptivo (ajustará su tamaño al contenedor)
-  maintainAspectRatio: false, // Desactiva el mantenimiento del aspecto para cambiar el tamaño personalizado
+  responsive: true, 
+  maintainAspectRatio: false,
 };
 
 
