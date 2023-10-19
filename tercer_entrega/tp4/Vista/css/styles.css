@@ -228,3 +228,9 @@ a:hover {
     color: #fffdfd; /* Cambia el color cuando el cursor está sobre el enlace */
     text-decoration: none; /* Elimina el subrayado */
 }
+
+.contGrafico{
+    width: 60%;
+    height: auto;
+
+}

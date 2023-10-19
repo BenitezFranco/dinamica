@@ -67,6 +67,7 @@ var chartConfig = {
   options: {
 
 
+
     scales: {
       y: {
         max: num+1,

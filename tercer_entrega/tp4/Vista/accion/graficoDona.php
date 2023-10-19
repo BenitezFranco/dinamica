@@ -26,7 +26,9 @@ include_once '../estructura/cabecera.php';
     echo $cadena;
     ?>
     <div class="container">
-        <canvas id="chartCanvas"></canvas>
+        <div class="contGrafico ">
+            <canvas id="chartCanvas"></canvas>  
+        </div>
     </div>
 
     <script type="module" src="../js/graficoDona.js"></script>

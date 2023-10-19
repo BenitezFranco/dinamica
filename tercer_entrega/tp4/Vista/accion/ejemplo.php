@@ -1,7 +1,6 @@
 <?php
 
 include('../../configuracion.php');
-include('../../util/fpdf/fpdf.php');
 
 class PDF extends FPDF
 {
