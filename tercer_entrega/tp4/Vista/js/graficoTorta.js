@@ -1,6 +1,7 @@
 var chartCanvas = document.getElementById("chartCanvas");
 var ctx = chartCanvas.getContext("2d");
 
+
 var nombres = [];
 var numeros = [];
 var num = 0;
@@ -21,7 +22,7 @@ elementosPersonas.forEach(persona => {
     }
   }
 });
-//Colores
+
 
 function generarColorAleatorio() {
   var letras = '0123456789ABCDEF';
@@ -36,10 +37,11 @@ var coloresAleatorios = [];
 for (var i = 0; i < nombres.length; i++) {
   var colorAleatorio = generarColorAleatorio();
 
+
   var alpha = 0.7; 
   var rgbaColor = `rgba(${parseInt(colorAleatorio.slice(1, 3), 16)}, ${parseInt(colorAleatorio.slice(3, 5), 16)}, ${parseInt(colorAleatorio.slice(5, 7), 16)}, ${alpha})`;
 
-  
+
   coloresAleatorios.push(rgbaColor);
 }
 
@@ -64,10 +66,10 @@ var chartConfig = {
 
     layout: {
       padding: {
-          left: 10, // Espacio izquierdo
-          right: 10, // Espacio derecho
-          top: 10, // Espacio superior
-          bottom: 10// Espacio inferior
+          left: 10, 
+          right: 10,
+          top: 10,
+          bottom: 10
       }
   },
 
@@ -94,15 +96,9 @@ var chartConfig = {
         display: true, 
         position: 'left', 
         labels: {
-<<<<<<< HEAD
           usePointStyle: true, 
-          generateLabels: function(chart){
-            return chart.data.labels.map(function(label,i){
-=======
-          usePointStyle: true, // Usa un estilo de punto similar al de las barras
           generateLabels: function (chart) {
             return chart.data.labels.map(function (label, i) {
->>>>>>> 5f6f4e2ed66249b04368951a68fe92c2c1977202
               return {
                 text: label + ':' + numeros[i],
                 fillStyle: coloresAleatorios[i],
@@ -120,7 +116,6 @@ var chartConfig = {
 
   },
 };
-
 
 var myChart = new Chart(ctx, chartConfig);
 myChart.resize(1200, 600);
