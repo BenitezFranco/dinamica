@@ -18,11 +18,7 @@ function Header()
     // Line break
     $this->Ln(20);
 
-    $this->Cell(40,10,'Patente',1,0,'C',0);
-    $this->Cell(30,10,'Marca',1,0,'C',0);
-    $this->Cell(30,10,"Modelo",1,0,'C',0);
-    $this->Cell(40,10,utf8_decode("Nombre Dueño"),1,0,'C',0);
-    $this->Cell(40,10,utf8_decode("Apellido Dueño"),1,1,'C',0);
+
 }
 
 // Page footer
@@ -33,7 +29,9 @@ function Footer()
     // Arial italic 8
     $this->SetFont('Arial','I',8);
     // Page number
-    $this->Cell(0,10,utf8_decode('Página '.$this->PageNo()).'/{nb}',0,0,'C');
+    
+    //$this->Cell(0,10,utf8_decode('Página '.$this->PageNo()).'/{nb}',0,0,'C');
+    $this->Cell(0,10,mb_convert_encoding('Página '.$this->PageNo(), 'ISO-8859-1', 'UTF-8').'/{nb}',0,0,'C');
 }
 }
 //prueba
@@ -48,7 +46,18 @@ $listaAuto = $objAbmAuto->buscar($null);
 $pdf = new PDF();
 $pdf->AliasNbPages();
 $pdf->AddPage();
+
+
+$pdf->SetFont('Arial','B',12);
+$pdf->Cell(40,10,'Patente',1,0,'C',0);
+$pdf->Cell(30,10,'Marca',1,0,'C',0);
+$pdf->Cell(30,10,"Modelo",1,0,'C',0);
+//$this->Cell(40,10,utf8_decode("Nombre Dueño"),1,0,'C',0);
+$pdf->Cell(40,10,mb_convert_encoding("Nombre Dueño", 'ISO-8859-1', 'UTF-8'),1,0,'C',0);
+$pdf->Cell(40,10,mb_convert_encoding("Apellido Dueño", 'ISO-8859-1', 'UTF-8'),1,1,'C',0);
+ 
 $pdf->SetFont('Times','',12);
+
 foreach($listaAuto as $objAuto){
     $pdf->Cell(40,10,$objAuto["Patente"],1,0,'C',0);
     $pdf->Cell(30,10,$objAuto["Marca"],1,0,'C',0);
@@ -56,8 +65,18 @@ foreach($listaAuto as $objAuto){
     $pdf->Cell(40,10,$objAuto["DniDuenio"]["Nombre"],1,0,'C',0);
     $pdf->Cell(40,10,utf8_decode($objAuto["DniDuenio"]["Apellido"]),1,1,'C',0);
 
-
 }
+/*
+$pdf->AddPage();
+
+$pdf->SetFont('Courier','B',15);
+$pdf->Write(5,"Hola Mundo");
+$pdf->Image('../img/descarga.jpeg',50,50,20,0,0,'https://www.fi.uncoma.edu.ar');
+//$pdf->Ln(50);
+$pdf->SetXY(20,50);
+$pdf->SetTextColor(0,0,255);
+$pdf->Write(5,"Volver");
+*/
 $pdf->Output();
 
 

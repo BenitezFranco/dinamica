@@ -1,8 +1,7 @@
-// Obtén las referencias a los elementos del DOM donde se mostrará el gráfico
 var chartCanvas = document.getElementById("chartCanvas");
 var ctx = chartCanvas.getContext("2d");
 
-// Define los datos del gráfico (lista de nombres y lista de números)
+
 var nombres = [];
 var numeros = [];
 var num=0;
@@ -23,7 +22,8 @@ elementosPersonas.forEach(persona => {
         }
     }
 });
-//COlores
+
+//Colores
 
 function generarColorAleatorio() {
   var letras = '0123456789ABCDEF';
@@ -34,21 +34,20 @@ function generarColorAleatorio() {
   return color;
 }
 
-// Arreglo para almacenar colores aleatorios
+
 var coloresAleatorios = [];
 for (var i = 0; i < nombres.length; i++) {
   var colorAleatorio = generarColorAleatorio();
 
-  // Ajustar la opacidad (alfa) del color
-  var alpha = 0.7; // Puedes cambiar este valor para ajustar la opacidad (0.7 representa una opacidad del 70%)
+
+  var alpha = 0.7; 
   var rgbaColor = `rgba(${parseInt(colorAleatorio.slice(1, 3), 16)}, ${parseInt(colorAleatorio.slice(3, 5), 16)}, ${parseInt(colorAleatorio.slice(5, 7), 16)}, ${alpha})`;
 
-  // Agregar el color aleatorio con opacidad al arreglo
+  
   coloresAleatorios.push(rgbaColor);
 }
 
 
-// Crea el objeto de configuración del gráfico
 var chartConfig = {
   type: "bar",
   data: {
@@ -104,5 +103,4 @@ var chartConfig = {
   },
 };
 
-// Crea el gráfico utilizando Chart.js
 var myChart = new Chart(ctx, chartConfig);
