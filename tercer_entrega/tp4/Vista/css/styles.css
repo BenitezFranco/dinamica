@@ -24,11 +24,14 @@ label {
     background: none;
     cursor: pointer;
     float: left;
-  }
-  .boton-con-imagen img {
-    width: 2px; /* Establece el ancho deseado para la imagen */
-    height: 6px; /* Establece el alto deseado para la imagen */
-  }
+}
+
+.boton-con-imagen img {
+    width: 2px;
+    /* Establece el ancho deseado para la imagen */
+    height: 6px;
+    /* Establece el alto deseado para la imagen */
+}
 
 input[type="text"],
 input[type="date"],
@@ -55,14 +58,15 @@ input[type="submit"] {
     margin: 0 auto;
     border-collapse: collapse;
     margin-bottom: 20px;
-  }
+}
 
-  .tabla-personas th, .tabla-personas td {
+.tabla-personas th,
+.tabla-personas td {
     border: 1px solid black;
     padding: 8px;
     text-align: left;
-  }
-  
+}
+
 
 
 input[type="submit"]:hover {
@@ -71,7 +75,8 @@ input[type="submit"]:hover {
 
 /* Estilos para el mensaje de validación */
 #mensaje {
-    color: #d9534f; /* Color rojo */
+    color: #d9534f;
+    /* Color rojo */
     font-weight: bold;
     text-align: center;
     margin-top: 10px;
@@ -79,22 +84,24 @@ input[type="submit"]:hover {
 
 .mi-boton {
     background-color: #040d41;
-    border: none; 
-    color: white; 
-    padding: 10px 20px; 
-    text-decoration: none; 
-    display: inline-block; 
-    cursor: pointer; 
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
 }
 
 .mi-boton a {
-    color: white; 
-    text-decoration: none; 
+    color: white;
+    text-decoration: none;
 }
 
 .mi-boton:hover {
-    background-color: #0a1e59; /* Cambia el color de fondo al pasar el ratón por encima */
+    background-color: #0a1e59;
+    /* Cambia el color de fondo al pasar el ratón por encima */
 }
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -153,6 +160,7 @@ body {
     padding: 10px 0;
     text-align: center;
 }
+
 /* Estilos para la tabla */
 .border {
     border: 1px solid #ccc;
@@ -170,11 +178,14 @@ body {
     padding: 10px;
     border: 1px solid #ccc;
 }
+
 .col.border.fw-bold {
     /* Agrega tus estilos personalizados aquí */
-    background-color: #040d41; 
-    border: 1px solid #ccc; /* Cambia el borde a un borde gris */
-    font-weight: bold; /* Establece la fuente en negrita */
+    background-color: #040d41;
+    border: 1px solid #ccc;
+    /* Cambia el borde a un borde gris */
+    font-weight: bold;
+    /* Establece la fuente en negrita */
 }
 
 /* Estilos para el encabezado de la tabla */
@@ -199,6 +210,7 @@ body {
     border-color: #040d41;
     color: white;
 }
+
 .custom-button:hover {
     background-color: #00172e;
     border-color: #00172e;
@@ -209,28 +221,41 @@ body {
 }
 
 a {
-   
-    color: #ffffff; /* Cambia el color del texto a tus preferencias */
-}
-a:hover {
-    color: #555; /* Cambia el color cuando el cursor está sobre el enlace */
-    text-decoration: none; /* Elimina el subrayado */
-}
-.botones {
-    text-align: center; /* Centra el contenido horizontalmente */
-    
-}
-.boton a:hover {
-    color: #555; /* Cambia el color cuando el cursor está sobre el enlace */
-    text-decoration: none; /* Elimina el subrayado */
-}
-.boton a {
-    color: #fffdfd; /* Cambia el color cuando el cursor está sobre el enlace */
-    text-decoration: none; /* Elimina el subrayado */
+
+    color: #ffffff;
+    /* Cambia el color del texto a tus preferencias */
 }
 
-.contGrafico{
-    width: 60%;
-    height: auto;
+a:hover {
+    color: #555;
+    /* Cambia el color cuando el cursor está sobre el enlace */
+    text-decoration: none;
+    /* Elimina el subrayado */
+}
+
+.botones {
+    text-align: center;
+    /* Centra el contenido horizontalmente */
+
+}
+
+.boton a:hover {
+    color: #555;
+    /* Cambia el color cuando el cursor está sobre el enlace */
+    text-decoration: none;
+    /* Elimina el subrayado */
+}
+
+.boton a {
+    color: #fffdfd;
+    /* Cambia el color cuando el cursor está sobre el enlace */
+    text-decoration: none;
+    /* Elimina el subrayado */
+}
+
+.contGrafico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
