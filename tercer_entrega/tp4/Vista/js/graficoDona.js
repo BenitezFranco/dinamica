@@ -1,3 +1,5 @@
+
+
 // Obtén las referencias a los elementos del DOM donde se mostrará el gráfico
 var chartCanvas = document.getElementById("chartCanvas");
 var ctx = chartCanvas.getContext("2d");
@@ -65,16 +67,38 @@ var chartConfig = {
     ],
   },
   options: {
+
+    layout: {
+      padding: {
+          left: 10, // Espacio izquierdo
+          right: 10, // Espacio derecho
+          top: 10, // Espacio superior
+          bottom: 10// Espacio inferior
+      }
+  },
+
     scales: {
       y: {
-        max: num+1,
+        max: num,
         beginAtZero: true,
         stepSize: 1,
       },
     },
 
     plugins: {
+
+      title: {
+        display: true,
+        text: 'Autos por clientes',
+        color: 'blue',
+        
+      },
+
+
       legend: {
+        padding:{
+          right: 50
+        },
         display: true, // Muestra la leyenda
         position: 'left', // Puedes cambiar la posición a 'top', 'right', 'bottom', 'left', etc.
         labels: {
@@ -82,7 +106,7 @@ var chartConfig = {
           generateLabels: function(chart){
             return chart.data.labels.map(function(label,i){
               return {
-                text: label+' - '+numeros[i],
+                text: label+':'+numeros[i],
                 fillStyle: coloresAleatorios[i],
                 lineWidth: 1,
                 pointStyle: 'rectRounded'
@@ -90,15 +114,18 @@ var chartConfig = {
             });
           }
         },
+
       },
-      title: {
-        display: true,
-        text: 'Autos por clientes',
-        color: 'blue',
-      }
+
+      
     },
   },
+};
+const options = {
+  responsive: true, // Permite que el gráfico sea receptivo (ajustará su tamaño al contenedor)
+  maintainAspectRatio: false, // Desactiva el mantenimiento del aspecto para cambiar el tamaño personalizado
 };
 
 // Crea el gráfico utilizando Chart.js
 var myChart = new Chart(ctx, chartConfig);
+myChart.resize(1200, 600);

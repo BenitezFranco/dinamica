@@ -6,7 +6,7 @@ include_once '../estructura/cabecera.php';
 <body>
     <script src="../js/chart.js/node_modules/chart.js/dist/chart.umd.js"></script>
     <div class="botones">
-        <button class="boton" ><a href="../accion/graficoBarra.php" target="_blank">
+        <button class="boton" ><a href="../accion/graficoBarra.php">
                 <img src="../img/barra.png" alt="PDF" width="30" height="30"> Grafico de Barra</a></button>
         <button type="submit" class="boton"><a href="../accion/graficoDona.php">
                 <img src="../img/dona.png" alt="PDF" width="30" height="30">Grafico de Dona</a></button>

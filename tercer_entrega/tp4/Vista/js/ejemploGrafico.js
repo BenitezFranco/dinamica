@@ -66,8 +66,14 @@ var chartConfig = {
   },
   options: {
 
-
-
+    layout: {
+      padding: {
+          left: 10, // Espacio izquierdo
+          right: 10, // Espacio derecho
+          top: 10, // Espacio superior
+          bottom: 10// Espacio inferior
+      }
+  },
     scales: {
       y: {
         max: num+1,
@@ -77,12 +83,13 @@ var chartConfig = {
     },
 
     plugins: {
+
       title: {
         display: true,
         text: 'Autos por clientes',
         color: 'blue',
-        align: 'start'
       },
+
       legend: {
         display: true, // Muestra la leyenda
         position: 'left', // Puedes cambiar la posición a 'top', 'right', 'bottom', 'left', etc.
@@ -91,7 +98,7 @@ var chartConfig = {
           generateLabels: function(chart){
             return chart.data.labels.map(function(label,i){
               return {
-                text: label+' - '+numeros[i],
+                text: label+':'+numeros[i],
                 fillStyle: coloresAleatorios[i],
                 lineWidth: 1,
                 pointStyle: 'rectRounded'
@@ -100,9 +107,13 @@ var chartConfig = {
           }
         },
       }
+
+
     },
   },
 };
 
 // Crea el gráfico utilizando Chart.js
+
 var myChart = new Chart(ctx, chartConfig);
+myChart.resize(800, 500);  

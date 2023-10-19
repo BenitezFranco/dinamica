@@ -14,7 +14,7 @@ $listaAuto = $objAbmAuto->buscar($null);
     <h1>Autos cargados</h1>
 
     <div class="botones-container">
-        <button class="boton" style="float: right;"><a href="../accion/ejemplo.php" target="_blank">
+        <button class="boton" style="float: right;"><a href="../accion/ejemplo.php">
                 <img src="../img/pdf.png" alt="PDF" width="30" height="30"> Generar PDF </a></button>
         <button type="submit" class="boton"><a href="../accion/graficoBarra.php">
         <img src="../img/chart.PNG" alt="PDF" width="30" height="30">Generar graficos</a></button>
