@@ -65,10 +65,10 @@ var chartConfig = {
 
     layout: {
       padding: {
-          left: 10, // Espacio izquierdo
-          right: 10, // Espacio derecho
-          top: 10, // Espacio superior
-          bottom: 10// Espacio inferior
+          left: 10, 
+          right: 10, 
+          top: 10, 
+          bottom: 10
       }
   },
 
