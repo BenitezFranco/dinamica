@@ -5,7 +5,7 @@ header ("Cache-Control: no-cache, must-revalidate ");
 // CONFIGURACION APP//
 /////////////////////////////
 
-$PROYECTO ='dinamica\tercer_entrega\tp4';
+$PROYECTO ='dinamica_\dinamica\tercer_entrega\tp4';
 
 //variable que almacena el directorio del proyecto
 $ROOT =$_SERVER['DOCUMENT_ROOT']."/$PROYECTO/";

@@ -14,11 +14,11 @@ header {
 }
 /* Estilos para la imagen */
 .jq {
-    display: block; /* Asegura que la imagen sea un elemento en bloque */
-    margin: 0 auto; /* Centra horizontalmente la imagen dentro del enlace */
+    display: block; 
+    margin: 0 auto; 
     max-width: 100px; /* Ajusta el tamaño máximo de la imagen */
     height: auto; /* Mantiene la proporción original de la imagen */
-    border: none; /* Elimina cualquier borde */
+    border: none; 
     transition: transform 0.2s; /* Agrega un efecto de escala al pasar el ratón */
 }
 
@@ -40,34 +40,15 @@ header {
 }
 /* Estilos del menú */
 nav {
-    background-color: #2903ff;
-}
-.boton-con-imagen {
-    border: none;
-    padding: 0;
-    background: none;
-    cursor: pointer;
-    float: left;
-  }
-  .boton-con-imagen img {
-    width: 2px; /* Establece el ancho deseado para la imagen */
-    height: 6px; /* Establece el alto deseado para la imagen */
-  }
-  
-.mi-boton {
-    background-color: #040d41;
-    border: none; 
-    color: white; 
-    padding: 10px 20px; 
-    text-decoration: none; 
-    display: inline-block; 
-    cursor: pointer; 
+    background-color: #ff941b;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center; /* Centrado horizontal */
+    align-items: center; /* Centrado vertical */
 }
 
-.mi-boton a {
-    color: white; 
-    text-decoration: none; 
-}
+
 .tabla-personas {
     width: 80%;
     margin: 0 auto;
@@ -101,12 +82,12 @@ nav {
 }
 
 .menu li:hover > a {
-    color: #ff0000; /* Color al pasar el ratón */
+    color: #616161; /* Color al pasar el ratón */
 }
 
 .menu ul {
     position: absolute;
-    background-color: #0156b8;
+    background-color:#040d41;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -118,9 +99,7 @@ nav {
     display: block; /* Mostrar submenú al pasar el ratón */
 }
 
-.menu ul li {
-    margin: 0;
-}
+
 
 .menu ul li a {
     display: block;
@@ -130,7 +109,7 @@ nav {
 }
 
 .menu ul li a:hover {
-    background-color: #fff1f1; /* Color al pasar el ratón */
+    background-color: #ff9305; /* Color al pasar el ratón */
 }
 
 /* Estilos del contenido principal */
@@ -144,11 +123,7 @@ main h2 {
     color: #000000;
 }
 
-main p {
-    font-size: 1.1rem;
-    color: #000000;
-    margin-bottom: 1rem;
-}
+
 
 main ul {
     list-style-type: none;
@@ -189,16 +164,35 @@ footer {
     width: 100%;
 }
 
-.logo-github {
-    margin-bottom: 1rem;
-}
-
 .logo-github img {
-    width: 70px; /* Ajusta el tamaño del logo de GitHub según tu preferencia */
+    width: 70px; 
     height: auto;
     transition: transform 0.2s;
 }
 
 .logo-github img:hover {
+    transform: scale(1.1);
+}
+.logo-github {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrado horizontal */
+    justify-content: center; /* Centrado vertical */
+    
+}
+.github-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrado horizontal */
+    justify-content: center; /* Centrado vertical */
+    text-align: center; /* Alineación del texto en el centro */
+    text-decoration: none; /* Quitar el subrayado */
+    color: black; /* Cambiar el color del texto a negro */
+}
+.github-link img{
+    max-width: 100px;
+}
+.github-link img:hover {
     transform: scale(1.1);
 }

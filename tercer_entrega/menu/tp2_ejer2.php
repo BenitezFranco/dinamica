@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="../menu/imagenes/descarga.jpeg" alt="LogoUnco">
+        <a href="../menu/index.php"><img src="../menu/imagenes/descarga.jpeg" alt="LogoUnco"></a>
             <div style="text-align: center; margin: auto;">
                 <h1>TECNICATURA EN DESARROLLO WEB</h1> 
                 <h2>Programacion web Dinamica</h2>

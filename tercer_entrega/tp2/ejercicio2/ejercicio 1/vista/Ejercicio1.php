@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - TP1</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#numeroForm").submit(function(event) {
+                // Evita que el formulario se envíe automáticamente
+                event.preventDefault();
+
+                // Obtener el valor del campo de número
+                var numero = $("#numero").val();
+
+                // Validar que se haya ingresado un número
+                if (!numero || isNaN(numero)) {
+                    alert("Por favor, ingrese un número válido.");
+                    return;
+                }
+
+                // Si todas las validaciones pasan, enviar el formulario
+                $(this).unbind("submit").submit();
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Formulario - Ejercicio 1</h1>
+    <form action="accion/a_Ejercicio1.php" method="post">
+        <label for="numero">Ingrese un número:</label>
+        <input type="number" id="numero" name="numero" required>
+        <button type="submit">Enviar</button>
+    </form>
+    <a class="button" href="../../../../menu/indexMenu.html">Volver</a>
+</body>
+</html>

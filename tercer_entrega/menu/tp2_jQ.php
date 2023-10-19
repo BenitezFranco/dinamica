@@ -9,7 +9,7 @@
 <body>
     <header>
         <div class="logo">
-            <img src="../menu/imagenes/descarga.jpeg" alt="LogoUnco">
+            <a href="../menu/index.php"><img src="../menu/imagenes/descarga.jpeg" alt="LogoUnco"></a>
             <div style="text-align: center; margin: auto;">
                 <h1>TECNICATURA EN DESARROLLO WEB</h1> 
                 <h2>Programacion web Dinamica</h2>
@@ -23,7 +23,7 @@
         <a href="https://jquery.com/">
             <img class="jq" src="../menu/imagenes/jquery-logo-vertical_large_square.png" alt="jQ">
         </a>
-        <a class="button" href="../menu/indexMenu.html">Volver</a>
+        <a class="button" href="../menu/index.php">Volver</a>
     </main>
 
     <footer>

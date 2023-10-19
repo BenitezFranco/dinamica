@@ -5,7 +5,6 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
     padding: 20px;
     margin: 20px auto;
-    max-width: 60%;
 }
 
 h1 {
@@ -190,15 +189,6 @@ body {
     background-color: #f2f2f2;
 }
 
-/* Estilos para el botón "Ver Autos" */
-.btn-link {
-    background: none;
-    border: none;
-    color: #007bff;
-    cursor: pointer;
-    text-decoration: underline;
-    padding: 0;
-}
 
 .btn-link:hover {
     text-decoration: none;
@@ -228,4 +218,13 @@ a:hover {
 }
 .botones {
     text-align: center; /* Centra el contenido horizontalmente */
+    
+}
+.boton a:hover {
+    color: #555; /* Cambia el color cuando el cursor está sobre el enlace */
+    text-decoration: none; /* Elimina el subrayado */
+}
+.boton a {
+    color: #fffdfd; /* Cambia el color cuando el cursor está sobre el enlace */
+    text-decoration: none; /* Elimina el subrayado */
 }
